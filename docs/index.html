@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Basic HTML Structure</title>
+    <style>
+        body {
+            display: flex;
+        }
+        #sidebar {
+            width: 200px;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+        #content {
+            flex-grow: 1;
+            padding: 10px;
+        }
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #sidebar ul li {
+            margin: 5px 0;
+        }
+        #sidebar ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+        #sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <!-- Content goes here -->
-    <h1>Welcome to My Website</h1>
-    <p>This is an example of inserting an image in HTML.</p>
-    <img src="../figures/cat.png" alt="An example image" width="300">
+    <div id="sidebar">
+        <h2>ブログリンク</h2>
+        <ul>
+            <li><a href="posts/blog1.html">VSCodeでtexを動かす</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>Welcome to My Website</h1>
+        猫<br>
+        <img src="../figures/cat.png" alt="An example image" width="300">
+    </div>
 </body>
 </html>
